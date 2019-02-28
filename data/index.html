@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>websocket</title>
+    <script src="jquery.min.js"></script>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var sock = new WebSocket('ws://' + location.hostname + ':443');
+
+        // サーバーからデータを受け取る
+        sock.addEventListener('message', function (e) {
+            console.log(e.data);
+        });
+    </script>
+</body>
+
+</html>
